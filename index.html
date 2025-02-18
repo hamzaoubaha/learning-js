@@ -7,7 +7,7 @@
 </head>
     
 <body>
-    <!-- <h1>page titel</h1> -->
+    <h1>page titel</h1>
      <p id="ses"> hamza oubaha </p>
 
     <script>
@@ -23,6 +23,35 @@
         // console.error("error");
         // console.table(["hamza", "ahmad", "ibrahim", " yassin"])
         // console.log("%chello from %cjs" , "color: red ; font-size : 40px ; ", "color: blue ; font-size : 30px ; ")
+      
+        document.getElementById("ses").style.color = "red";
+        document.querySelector("h1").style.color='blue';
+        window.alert("hello from js"); //== output in box shows from navegatuer 
+        document.write("<h1> hello world </h1>"); //== output in the body 
+        console.log("hello from js ")// == output in console
+        console.log("log");
+        console.error("error");
+        console.table(["hamza", "ahmad", "ibrahim", " yassin"])
+        console.warn(" warning ")
+        console.group( " user info ");
+        console.log("name : hamza ");
+        console.log("age : 23 ");
+        console.groupEnd( "name : hamza ", " age : 25 ");
+
+        console.time("loop Time");
+        for (let i = 0; i < 1000; i++ ) { 
+            document.write("hello hamza ")
+        }
+        console.timeEnd("looptime");
+        
+        console.log("hello %cfrom Js ", " color : blue ; font size : 40px ; ")
+        console.log("%chello from %cjs" , "color: red ; font-size : 40px ; ", "color: blue ; font-size : 30px ; ")
+
+        var my_name = " hamza "
+        console.log("hello" + my_name)
+
+
+
     </script>
 </body>
 </html>
