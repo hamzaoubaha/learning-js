@@ -50,37 +50,6 @@
         var my_name = " hamza "
         console.log("hello" + my_name)
 
-        const { exec } = require("child_process");
-
-                
-        function runCommand(command) {
-        exec(command, (error, stdout, stderr) => {
-            if (error) {
-            console.error(`خطأ أثناء التنفيذ: ${error.message}`);
-            return;
-            }
-            if (stderr) {
-            console.error(`تحذير: ${stderr}`);
-            return;
-            }
-            console.log(`النتيجة:\n${stdout}`);
-        });
-        }
-
-        console.log("1. التحقق من حالة المستودع...");
-        runCommand("git status");
-
-        console.log("\n2. إضافة جميع التغييرات...");
-        runCommand("git add .");
-
-        console.log("\n3. إنشاء commit...");
-        runCommand('git commit -m "رسالة: تم تحديث المشروع"');
-
-        console.log("\n4. رفع التغييرات إلى GitHub...");
-        runCommand("git push origin main");
-
-
-
     </script>
 </body>
 </html>
