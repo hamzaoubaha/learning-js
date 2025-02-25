@@ -8,8 +8,27 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #222;
+            background: url(game-background.jpg) no-repeat fixed center/cover;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items : center ;
+            height: 100vh;
+        }
+        .containerp{
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            border-radius: 20px;
+            background-color: rgba(255, 252, 252, 0.8); 
+            backdrop-filter: blur(5px); 
+            padding: 20px;
+            box-shadow:  10px 10px  20px 20px #7c559c;
+           
+
         }
         .container {
             margin-top: 20px;
@@ -33,21 +52,31 @@
             outline: none;
             
         }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <h1>لعبة تخمين الرقم 🎯</h1>
-    <p>حاول تخمين الرقم بين 1 و 15</p>
-
-    <div class="container">
-        <input type="number" id="guess" min="1" max="15">
-        <button class="btn btn-check" onclick="checkGuess()">تحقق</button>
-    </div>
-
-    <h2 id="attempts">المحاولات المتبقية: 10</h2>
-    <h2 id="message"></h2>
+    <div class="containerp">
+        
+        <h1>لعبة <span style="color: green;"> تخمين </span> الرقم 🎯</h1>
+        <p>حاول <span style="color: green;"> تخمين </span>الرقم بين 1 و 15</p>
     
-    <button class="btn btn-restart" onclick="restartGame()" style="display: none;">إعادة اللعب 🔄</button>
+        <div class="container">
+            <input type="number" id="guess" min="1" max="15">
+            <button class="btn btn-check" onclick="checkGuess()">تحقق</button>
+        </div>
+    
+        <h2 id="attempts">المحاولات المتبقية: 10</h2>
+        <h2 id="message"></h2>
+        
+        
+        <button class="btn btn-restart" onclick="restartGame()" style="display: none;">إعادة اللعب 🔄</button>
+       
+    </div>
     <script src="learn.js"></script>
 </body>
 </html>
